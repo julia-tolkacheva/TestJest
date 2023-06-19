@@ -1,4 +1,4 @@
-import{sum, power} from './testBox.js';
+import{sum, power, reverseString} from './testBox.js';
 
 test('adds 1 + 2 to equal 3', () => {
   expect(sum(1, 2)).toBe(3);
@@ -21,5 +21,22 @@ describe(
       expect(power(2,19)).toBe(524288);
     })
 
+  }
+)
+
+describe(
+  "reverse string test",
+  () => {
+    it ("reverse(\"abcd\") eq \"dcba\"", () => {
+      expect(reverseString("abcd")).toBe("dcba")
+    }),
+
+    it ("reverse(\"1  2  3 \") eq  \" 3  2  1\"", () => {
+      expect(reverseString("1  2  3 ")).toBe(" 3  2  1")
+    }),
+
+    it ("reverse polyndrom (\"evil ded live\") eq  \"evil ded live\"", () => {
+      expect(reverseString("evil ded live")).toBe("evil ded live")
+    })
   }
 )

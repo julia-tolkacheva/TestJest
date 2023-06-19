@@ -11,4 +11,11 @@ function sum(a, b) {
     return a + b;
   }
 
-module.exports = {sum, power};
+
+function reverseString(string) {
+    const revStr = string.split("").reverse().join("");
+    console.log(string, '/n', revStr);
+    return revStr;
+}
+
+module.exports = {sum, power, reverseString};
